@@ -1,10 +1,5 @@
+from .api import basic
+from .utils import Handlers
 
-
-from api import basic
-from . import utils
-
-
-
-utils.handlers.extend(basic.handlers)
-
-
+api_handlers = Handlers()
+api_handlers.add(basic.handlers)

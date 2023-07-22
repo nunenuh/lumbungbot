@@ -10,6 +10,7 @@ packages = [{include = "llama_bot"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 python-telegram-bot = "^20.4"
+python-dotenv = "^1.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
