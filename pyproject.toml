@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "llama-bot"
+version = "0.1.0"
+description = "Telegram bot for running llama from meta"
+authors = ["Lalu Erfandi Maula Yusnu <nunenuh@gmail.com>"]
+license = "Apache 2 License"
+readme = "README.md"
+packages = [{include = "llama_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-telegram-bot = "^20.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+ipython = "^8.14.0"
+coverage = "^7.2.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
