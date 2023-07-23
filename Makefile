@@ -4,7 +4,8 @@ venv:
 	@echo "Activating virtual environment"
 	@source venv/bin/activate
 
-
+run:
+	PYTHONAPP=.:src python src/lumbungbot/main.py
 
 run-test:
 ifdef dst
@@ -15,3 +16,6 @@ endif
 
 run-test-cov:
 	@PYTHONPATH=.:src:$PYTHONPATH pytest --cov=src --cov-report=xml
+
+precommit:
+	pre-commit run --all-files
