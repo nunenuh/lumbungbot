@@ -2,9 +2,16 @@ from typing import Dict
 
 from telegram import Update
 from telegram.ext import ContextTypes
+from telegram import ForceReply, Update
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # user = update.effective_user
+    # await update.message.reply_html(
+    #     rf"Hi {user.mention_html()}!",
+    #     reply_markup=ForceReply(selective=True),
+    # )
+    
     await context.bot.send_message(
         chat_id=update.effective_chat.id, text="I'm a bot, please talk to me!"
     )
